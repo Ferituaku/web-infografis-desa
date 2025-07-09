@@ -1,0 +1,33 @@
+timestamp,name,age,rt_rw,knowsDisasterTypes,knowsWarningSigns,disasterPotency,hasEvacuationPlan,hasEmergencyKit,familyKnowsEvacuationPoint,knowsEmergencyNumbers,hasAttendedTraining,informationSources,informationUsefulness,evacuationSignsAvailable,knowsResponsiblePerson,hasCoordinatedWithNeighbours,willingToParticipate,hopeFirstAidTraining,hopeEvacuationInfo,hopeDisasterTeam,hopeEmergencyEquipment
+01/07/2025 6:42:20,Anika Ulfa,37,01/03,Ya,Tidak,Sedang,Ya,Tidak punya sama sekali,Tidak,Tidak,Tidak,"Media sosial, Televisi",3,Tidak Tahu,Tidak,Tidak,Ya,5,5,5,5
+01/07/2025 6:49:14,ALFIYAH,50,01/03,Ya,Ya,Rendah,Ya,Tidak punya sama sekali,Ya,Ya,Ya,Media sosial,5,Tidak,Ya,Tidak,Ya,5,5,5,5
+01/07/2025 7:18:18,Sukaibah,46,01/03,Ya,Ya,Sedang,Tidak,Sebagian ada,Ya,Ya,Ya,Media sosial,4,Tidak,Ya,Tidak,Ya,3,4,4,5
+01/07/2025 9:26:58,Yesi febriani ,37,01/03,Ya,Ya,Sangat rendah,Ya,Sebagian ada,Ya,Tidak,Tidak,Media sosial,4,Tidak,Tidak,Tidak,Ya,5,5,5,5
+01/07/2025 9:36:13,Ngatinah,47,01/03,Ya,Ya,Sedang,Ya,Sebagian ada,Ya,Tidak,Tidak,Media sosial,3,Tidak,Ya,Tidak,Tidak,3,3,3,4
+01/07/2025 10:46:50,Ariyati,48,01/03,Ya,Ya,Sedang,Ya,Sebagian ada,Ya,Ya,Ya,"Pemerintah, Media sosial, Televisi, Sekolah",5,Tidak,Ya,Ya,Ya,5,5,5,5
+01/07/2025 12:57:52,Agus priyono,35,01/03,Ya,Ya,Tinggi,Ya,Sebagian ada,Tidak,Tidak,Ya,Di pabrik tempat bekerja dulu,5,Tidak Tahu,Tidak,Tidak,Ya,3,4,4,4
+01/07/2025 13:35:28,PAJARIYATI,53,01/03,Ya,Ya,Rendah,Tidak,Sebagian ada,Tidak,Tidak,Tidak,Media sosial,3,Tidak,Tidak,Tidak,Ya,5,2,3,1
+01/07/2025 16:03:37,Jariyah,62,01/03,Tidak,Tidak,Sangat rendah,Ya,Sebagian ada,Ya,Tidak,Tidak,Media sosial,5,Tidak,Tidak,Tidak,Ya,5,5,4,4
+01/07/2025 16:13:09,Sinta meilana sari,25,01/03,Ya,Ya,Sedang,Ya,Sebagian ada,Tidak,Tidak,Tidak,Media sosial,4,Tidak Tahu,Tidak,Tidak,Tidak,5,5,5,5
+01/07/2025 16:13:16,Susi Susanti ,51,01/03,Ya,Ya,Sedang,Ya,Sebagian ada,Ya,Tidak,Tidak,Media sosial,3,Tidak,Tidak,Tidak,Ya,5,5,5,3
+01/07/2025 16:14:05,Listiyowati,38,01/03,Ya,Ya,Tinggi,Ya,Sebagian ada,Ya,Ya,Tidak,"Pemerintah, Media sosial, Televisi",5,Tidak,Ya,Ya,Ya,5,5,5,5
+01/07/2025 16:15:04,Sugiyanto,38,01/03,Ya,Ya,Sedang,Ya,Tidak punya sama sekali,Ya,Tidak,Tidak,Televisi,1,Tidak,Ya,Tidak,Ya,5,2,1,2
+01/07/2025 20:20:39,Astin wulandari,57,01/03,Ya,Ya,Sedang,Ya,Sebagian ada,Ya,Ya,Tidak,Semuanya,4,Tidak,Tidak,Tidak,Tidak,4,4,4,4
+02/07/2025 22:06:01,sugigi,50,01/03,Ya,Ya,Sedang,Ya,Sebagian ada,Tidak,Tidak,Tidak,"Media sosial, Televisi",3,Tidak Tahu,Ya,Tidak,Ya,3,5,4,5
+04/07/2025 14:38:38,Unik Trimurnj,44,01/03,Ya,Ya,Rendah,Ya,Sebagian ada,Ya,Ya,Tidak,Sekolah,3,Tidak,Tidak,Tidak,Ya,5,5,4,3
+04/07/2025 15:48:01,Ahmad Yuliono Setiawan ,31,01/03,Ya,Ya,Sedang,Ya,Sebagian ada,Ya,Ya,Tidak,Televisi,3,Tidak Tahu,Ya,Ya,Ya,3,5,5,4
+04/07/2025 16:11:51,Suci munawaroh,32,01/03,Ya,Ya,Sedang,Ya,Sebagian ada,Ya,Ya,Tidak,Media sosial,5,Tidak Tahu,Tidak Yakin,Tidak,Ya,5,5,5,5
+04/07/2025 16:15:37,Nur,59,01/03,Ya,Ya,Sedang,Ya,Sebagian ada,Ya,Tidak,Tidak,Media sosial,3,Tidak Tahu,Tidak Yakin,Ya,Ya,5,4,4,3
+04/07/2025 19:21:11,Zuhriyah,52,01/03,Tidak,Tidak,Sedang,Tidak,Tidak punya sama sekali,Tidak,Tidak,Tidak,Media sosial,3,Tidak Tahu,Ya,Ya,Tidak,3,5,5,5
+04/07/2025 20:14:17,Wahyuni,39,01/03,Ya,Tidak,Rendah,Ya,Sebagian ada,Ya,Tidak,Tidak,Televisi,5,Ya,Tidak,Tidak,Ya,3,3,3,3
+05/07/2025 5:21:52,Eko Prastiyo N,45,01/03,Ya,Tidak,Rendah,Ya,Sebagian ada,Ya,Ya,Tidak,Media sosial,3,Tidak Tahu,Tidak,Tidak,Ya,3,3,3,4
+05/07/2025 9:07:40,Sunarti,61,01/03,Tidak,Tidak,Rendah,Tidak,Sebagian ada,Tidak,Ya,Tidak,Anak,3,Tidak Tahu,Tidak,Tidak,Tidak,3,3,3,3
+05/07/2025 12:39:08,Sunaryati,55,01/03,Ya,Ya,Sedang,Ya,Ya lengkap,Ya,Ya,Tidak,Media sosial,4,Tidak Tahu,Tidak,Tidak,Ya,5,5,4,5
+06/07/2025 16:37:05,Muntofiah,58,01/03,Ya,Tidak,Sedang,Ya,Sebagian ada,Ya,Tidak,Tidak,Televisi,1,Tidak,Tidak,Ya,Tidak,3,3,3,3
+06/07/2025 16:39:02,Darmi,56,01/03,Ya,Tidak,Sangat rendah,Tidak,Ya lengkap,Ya,Ya,Tidak,Warha,4,Ya,Ya,Ya,Ya,5,5,5,5
+06/07/2025 16:41:11,Suparya,51,01/03,Tidak,Ya,Tinggi,Ya,Tidak punya sama sekali,Tidak,Tidak,Tidak,Televisi,3,Tidak,Tidak Yakin,Tidak,Ya,1,5,5,5
+06/07/2025 16:42:17,Bu siti subariyah,56,01/03,Ya,Ya,Tinggi,Ya,Tidak punya sama sekali,Ya,Tidak,Tidak,Pemerintah,5,Tidak Tahu,Ya,Ya,Ya,5,5,5,5
+06/07/2025 16:44:52,Wahyuni,65,01/03,Ya,Ya,Sedang,Ya,Tidak punya sama sekali,Ya,Tidak,Ya,Televisi,5,Tidak,Ya,Ya,Ya,2,5,5,5
+06/07/2025 16:47:03,Priyanti,42,01/03,Ya,Ya,Rendah,Tidak,Sebagian ada,Tidak,Tidak,Ya,Sekolah,5,Tidak Tahu,Tidak,Tidak,Ya,4,4,4,4
+06/07/2025 17:58:15,Wahyuni,64,01/03,Tidak,Ya,Sedang,Ya,Ya lengkap,Ya,Ya,Ya,"Media sosial, Televisi",4,Tidak,Ya,Ya,Ya,5,5,5,5
+06/07/2025 20:52:02,Triana yuniastuti,44,01/03,Ya,Ya,Sedang,Ya,Tidak punya sama sekali,Tidak,Tidak,Tidak,Media sosial,4,Tidak,Tidak,Tidak,Ya,4,4,3,3
