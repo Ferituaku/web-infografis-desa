@@ -39,10 +39,10 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative bg-base-100 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
-        <div className="relative z-10 pb-8 bg-base-100 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-          <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+    <section className="relative bg-base-100 overflow-hidden">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center">
+        <div className="w-full lg:w-1/2 z-10 pb-8 bg-base-100 sm:pb-16 md:pb-20 lg:pb-28 xl:pb-32">
+          <main className="mt-10 px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 xl:mt-28">
             <div className="sm:text-center lg:text-left">
               <h1 className="text-4xl tracking-tight font-extrabold text-content-strong sm:text-5xl md:text-6xl">
                 <span className="block xl:inline">Tetap Siaga,</span>{" "}
@@ -53,28 +53,26 @@ const Hero = () => {
               <p className="mt-3 text-base text-content sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                 Pahami kesiapan lingkungan Anda dan ambil tindakan hari ini.
               </p>
-              <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                <div className="rounded-md shadow">
-                  <button
-                    onClick={scrollToDashboard}
-                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-brand-primary hover:bg-brand-primary-focus md:py-4 md:text-lg md:px-10 transition duration-150 ease-in-out"
-                  >
-                    Lihat Dasbor
-                  </button>
-                </div>
+              <div className="mt-5 sm:mt-8 flex sm:justify-center lg:justify-start">
+                <button
+                  onClick={scrollToDashboard}
+                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-currentColor bg-brand-primary hover:bg-brand-primary-focus md:py-4 md:text-lg md:px-10 transition duration-150 ease-in-out"
+                >
+                  Lihat Dasbor
+                </button>
               </div>
             </div>
           </main>
         </div>
+        <div className="w-full lg:w-1/2 flex justify-center items-center">
+          <img
+            className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full rounded-lg shadow-lg"
+            src="/tembcy.jpg"
+            alt="Kelurahan Tembalang"
+          />
+        </div>
       </div>
-      <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-        <img
-          className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-          src="https://picsum.photos/1000/800?image=835"
-          alt="Emergency supplies"
-        />
-      </div>
-    </div>
+    </section>
   );
 };
 
@@ -84,17 +82,20 @@ const PreparednessSteps = () => {
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          fill="none"
+          width="24"
+          height="24"
           viewBox="0 0 24 24"
-          strokeWidth={1.5}
+          fill="none"
           stroke="currentColor"
-          className="w-12 h-12 text-brand-primary"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-square-chart-gantt-icon lucide-square-chart-gantt"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-1.125 0-2.062.938-2.062 2.063v7.5c0 1.125.937 2.063 2.063 2.063h9.25c1.125 0 2.063-.938 2.063-2.063v-7.5c0-1.125-.937-2.063-2.063-2.063H8.25z"
-          />
+          <rect width="18" height="18" x="3" y="3" rx="2" />
+          <path d="M9 8h7" />
+          <path d="M8 12h6" />
+          <path d="M11 16h5" />
         </svg>
       ),
       title: "Buat Rencana",
@@ -105,17 +106,18 @@ const PreparednessSteps = () => {
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          fill="none"
+          width="24"
+          height="24"
           viewBox="0 0 24 24"
-          strokeWidth={1.5}
+          fill="none"
           stroke="currentColor"
-          className="w-12 h-12 text-brand-primary"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-briefcase-icon lucide-briefcase"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h.008v.008h-.008v-.008zm-3 0h-6m9 0H19.5a1.125 1.125 0 001.125-1.125V14.25m-17.25 4.5L12 12.75M3.375 14.25L12 12.75m0 0L20.625 14.25M12 12.75V3.75m0 9l-8.625 4.5M12 3.75L20.625 8.25M12 3.75v9M20.625 8.25L12 12.75"
-          />
+          <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+          <rect width="20" height="14" x="2" y="6" rx="2" />
         </svg>
       ),
       title: "Siapkan Tas Siaga",
@@ -126,17 +128,20 @@ const PreparednessSteps = () => {
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          fill="none"
+          width="24"
+          height="24"
           viewBox="0 0 24 24"
-          strokeWidth={1.5}
+          fill="none"
           stroke="currentColor"
-          className="w-12 h-12 text-brand-primary"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-smile-icon lucide-smile"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M14.828 14.828a4.5 4.5 0 01-6.364 0M9 10.5H9.008v.008H9v-.008zm5.25 0H14.258v.008H14.25v-.008zM12 21a9 9 0 100-18 9 9 0 000 18z"
-          />
+          <circle cx="12" cy="12" r="10" />
+          <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+          <line x1="9" x2="9.01" y1="9" y2="9" />
+          <line x1="15" x2="15.01" y1="9" y2="9" />
         </svg>
       ),
       title: "Tetap Terinformasi",
@@ -146,9 +151,11 @@ const PreparednessSteps = () => {
   ];
 
   return (
-    <div className="py-12 bg-base-100">
-      <div className="max-w-xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-        <h2 className="sr-only">Bersiaplah untuk segala situasi.</h2>
+    <section className="py-16 bg-base-100">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-2xl font-bold text-content-strong text-center mb-10">
+          Bersiaplah untuk segala situasi
+        </h2>
         <dl className="space-y-10 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8">
           {steps.map((step) => (
             <div
@@ -170,7 +177,7 @@ const PreparednessSteps = () => {
           ))}
         </dl>
       </div>
-    </div>
+    </section>
   );
 };
 
@@ -179,7 +186,7 @@ const Footer = () => (
     <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
       <div className="mt-8 md:mt-0 md:order-1">
         <p className="text-center text-base text-gray-400">
-          &copy; 2024 PrepWise. Hak cipta dilindungi undang-undang.
+          &copy; 2025 INFOGRAFIS DESA KKNT IDBU TIM 73.
         </p>
       </div>
     </div>
@@ -188,14 +195,16 @@ const Footer = () => (
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-base-200">
+    <div className="min-h-screen bg-base-200 flex flex-col">
       <Header />
-      <main>
+      <main className="flex-1">
         <Hero />
         <PreparednessSteps />
-        <div id="dashboard" className="py-10 sm:py-16">
-          <Dashboard />
-        </div>
+        <section id="dashboard" className="py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Dashboard />
+          </div>
+        </section>
       </main>
       <Footer />
     </div>
