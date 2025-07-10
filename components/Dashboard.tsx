@@ -64,7 +64,7 @@ const MetricCard = ({
   icon: React.ReactElement;
   tag?: React.ReactElement;
 }) => (
-  <div className="bg-base-100 p-5 rounded-xl shadow-sm flex-1">
+  <div className="bg-base-100 p-5 rounded-xl shadow-md flex-1">
     <div className="flex justify-between items-start">
       <span className="text-gray-400">{icon}</span>
       {tag}
@@ -99,7 +99,7 @@ const ChartCard = ({
   title: string;
   children: React.ReactElement;
 }) => (
-  <div className="bg-base-100 p-6 rounded-xl shadow-sm">
+  <div className="bg-base-100 p-6 rounded-xl shadow-md">
     <h3 className="font-bold text-content-strong mb-4">{title}</h3>
     <div style={{ width: "100%", height: 300 }}>
       <ResponsiveContainer>{children}</ResponsiveContainer>
@@ -283,7 +283,7 @@ const SummaryTab = ({ data }: { data: DashboardAnalysis }) => {
       </section>
 
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
-        <div className="lg:col-span-2 bg-base-100 p-6 rounded-xl shadow-sm">
+        <div className="lg:col-span-2 bg-base-100 p-6 rounded-xl shadow-md">
           <h3 className="font-bold text-content-strong mb-4">
             Distribusi Tingkat Kesiapsiagaan
           </h3>
@@ -304,7 +304,7 @@ const SummaryTab = ({ data }: { data: DashboardAnalysis }) => {
             ))}
           </div>
         </div>
-        <div className="lg:col-span-3 bg-base-100 p-6 rounded-xl shadow-sm">
+        <div className="lg:col-span-3 bg-base-100 p-6 rounded-xl shadow-md">
           <h3 className="font-bold text-content-strong mb-4">
             Skor Berdasarkan Kategori
           </h3>
@@ -322,7 +322,7 @@ const SummaryTab = ({ data }: { data: DashboardAnalysis }) => {
             ))}
           </div>
         </div>
-        <div className="lg:col-span-5 bg-base-100 p-6 rounded-xl shadow-sm">
+        <div className="lg:col-span-5 bg-base-100 p-6 rounded-xl shadow-md">
           <h3 className="font-bold text-content-strong mb-4">Insight Utama</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
             <div className="flex items-start space-x-3">
@@ -452,7 +452,7 @@ const ChartsAnalysisTab = ({ data }: { data: ChartData }) => (
 );
 
 const ScoreAnalysisTab = ({ data }: { data: DetailedRespondentScore[] }) => (
-  <div className="bg-base-100 p-6 rounded-xl shadow-sm">
+  <div className="bg-base-100 p-6 rounded-xl shadow-md">
     <h3 className="font-bold text-content-strong mb-4">
       Analisis Skor per Responden
     </h3>
@@ -528,7 +528,7 @@ const RawDataTab = ({ data }: { data: SurveyResponse[] }) => {
     );
   const headers = Object.keys(data[0]);
   return (
-    <div className="bg-base-100 p-6 rounded-xl shadow-sm">
+    <div className="bg-base-100 p-6 rounded-xl shadow-md">
       <h3 className="font-bold text-content-strong mb-4">Data Mentah Survei</h3>
       <div className="overflow-x-auto relative">
         <table className="w-full text-sm text-left text-content">
