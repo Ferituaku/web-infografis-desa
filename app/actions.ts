@@ -11,7 +11,7 @@ export async function getFullDashboardDataAction(): Promise<{
     const fullData = await fetchFullDashboardData();
     return { data: fullData, error: null };
   } catch (e) {
-    const error = e instanceof Error ? e.message : "An unknown error occurred";
+    // const error = e instanceof Error ? e.message : "An unknown error occurred";
     console.error("Error in getFullDashboardDataAction:", e);
     return { data: null, error: "Gagal memuat data dasbor." };
   }
