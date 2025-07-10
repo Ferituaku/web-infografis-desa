@@ -12,11 +12,12 @@
     "@google/genai": "^1.8.0",
     "@tailwindcss/vite": "^4.1.11",
     "csv-parse": "^5.6.0",
+    "daisyui": "^5.0.46",
     "lucide-react": "^0.525.0",
     "next": "15.3.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "recharts": "^3.0.2"
+    "recharts": "^3.1.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
