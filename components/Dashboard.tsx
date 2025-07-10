@@ -564,6 +564,130 @@ const RawDataTab = ({ data }: { data: SurveyResponse[] }) => {
   );
 };
 
+import {
+  PhoneCall,
+  Ambulance,
+  FireExtinguisher,
+  Building2,
+  ShieldAlert,
+} from "lucide-react"; // Menggunakan Building2 untuk variasi ikon BPBD
+
+const EmergencyContactsTab = () => (
+  <div className="bg-base-100 p-8 rounded-2xl shadow-md border border-gray-100 animate-fade-in">
+    <h3 className="font-extrabold text-3xl text-content-strong mb-4 text-center leading-tight">
+      Panggilan Darurat Cepat
+    </h3>
+    <p className="text-content-light text-lg mb-8 text-center max-w-2xl mx-auto">
+      Daftar kontak penting yang siap dihubungi saat Anda membutuhkan bantuan
+      segera. Informasi ini dirancang untuk kemudahan akses dalam situasi
+      mendesak.
+    </p>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {/* Polisi */}
+      <div className="bg-white p-6 rounded-xl shadow-md border border-blue-100 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group cursor-pointer">
+        <div className="flex flex-col items-center text-center">
+          <PhoneCall
+            size={48}
+            className="text-blue-600 mb-4 group-hover:scale-110 transition-transform"
+          />
+          <h4 className="font-bold text-2xl text-blue-800 mb-2">Polisi</h4>
+          <p className="text-gray-700 text-sm mb-3">
+            Layanan Kepolisian Nasional untuk keamanan dan ketertiban.
+          </p>
+          <a
+            href="tel:110"
+            className="btn btn-outline btn-info border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition-colors duration-300 mt-auto w-full"
+          >
+            Panggil 110
+          </a>
+        </div>
+      </div>
+
+      {/* Ambulans */}
+      <div className="bg-white p-6 rounded-xl shadow-md border border-red-100 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group cursor-pointer">
+        <div className="flex flex-col items-center text-center">
+          <Ambulance
+            size={48}
+            className="text-red-600 mb-4 group-hover:scale-110 transition-transform"
+          />
+          <h4 className="font-bold text-2xl text-red-800 mb-2">Ambulans</h4>
+          <p className="text-gray-700 text-sm mb-3">
+            Bantuan medis darurat dan transportasi pasien.
+          </p>
+          <a
+            href="tel:118"
+            className="btn btn-outline btn-error border-red-500 text-red-500 hover:bg-red-500 hover:text-white transition-colors duration-300 mt-auto w-full"
+          >
+            Panggil 118
+          </a>
+        </div>
+      </div>
+
+      {/* Pemadam Kebakaran */}
+      <div className="bg-white p-6 rounded-xl shadow-md border border-orange-100 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group cursor-pointer">
+        <div className="flex flex-col items-center text-center">
+          <FireExtinguisher
+            size={48}
+            className="text-orange-600 mb-4 group-hover:scale-110 transition-transform"
+          />
+          <h4 className="font-bold text-2xl text-orange-800 mb-2">
+            Pemadam Kebakaran
+          </h4>
+          <p className="text-gray-700 text-sm mb-3">
+            Penanganan insiden kebakaran dan penyelamatan.
+          </p>
+          <a
+            href="tel:113"
+            className="btn btn-outline btn-warning border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-colors duration-300 mt-auto w-full"
+          >
+            Panggil 113
+          </a>
+        </div>
+      </div>
+
+      {/* BPBD */}
+      <div className="bg-white p-6 rounded-xl shadow-md border border-green-100 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group cursor-pointer">
+        <div className="flex flex-col items-center text-center">
+          <Building2
+            size={48}
+            className="text-green-600 mb-4 group-hover:scale-110 transition-transform"
+          />
+          <h4 className="font-bold text-2xl text-green-800 mb-2">BPBD</h4>
+          <p className="text-gray-700 text-sm mb-3">
+            Badan Penanggulangan Bencana Daerah untuk mitigasi bencana.
+          </p>
+          <a
+            href="tel:112"
+            className="btn btn-outline btn-success border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition-colors duration-300 mt-auto w-full"
+          >
+            Panggil 112
+          </a>
+        </div>
+      </div>
+      {/* BPBD */}
+      <div className="bg-white p-6 rounded-xl shadow-md border border-green-100 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group cursor-pointer">
+        <div className="flex flex-col items-center text-center">
+          <ShieldAlert
+            size={48}
+            className="text-orange-500 mb-4 group-hover:scale-110 transition-transform"
+          />
+          <h4 className="font-bold text-2xl text-orange-700 mb-2">Basarnas</h4>
+          <p className="text-gray-700 text-sm mb-3">
+            Badan Nasional Pencarian dan Pertolongan untuk pasca bencana.
+          </p>
+          <a
+            href="tel:115"
+            className="btn btn-outline btn-success border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-colors duration-300 mt-auto w-full"
+          >
+            Panggil 112
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
 const TabNavigation = ({
   activeTab,
   setActiveTab,
@@ -576,6 +700,7 @@ const TabNavigation = ({
     "Grafik & Analisis",
     "Analisis Skor",
     "Data Mentah",
+    "Kontak Darurat",
   ];
   return (
     <div className="mb-6 border-b border-slate-200">
@@ -657,6 +782,8 @@ export const Dashboard = () => {
         return <ScoreAnalysisTab data={data.detailedScores} />;
       case "Data Mentah":
         return <RawDataTab data={data.rawData} />;
+      case "Kontak Darurat":
+        return <EmergencyContactsTab />;
       default:
         return <SummaryTab data={data.analysis} />;
     }
