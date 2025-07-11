@@ -679,7 +679,7 @@ const EmergencyContactsTab = () => (
             href="tel:115"
             className="btn btn-outline btn-success border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-colors duration-300 mt-auto w-full"
           >
-            Panggil 112
+            Panggil 115
           </a>
         </div>
       </div>

@@ -29,9 +29,7 @@ const Header = () => (
 const Footer = () => (
   <footer className="bg-base-100/80 backdrop-blur-sm py-4 mt-8">
     <div className="container mx-auto text-center text-sm text-content">
-      <p>
-        &copy; {new Date().getFullYear()} InfografiDesa By KKNT IDBU TIM 73.
-      </p>
+      <p>&copy; {new Date().getFullYear()} Ingdeswa By KKNT IDBU TIM 73.</p>
     </div>
   </footer>
 );
