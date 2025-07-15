@@ -132,7 +132,7 @@ const SummaryTab = ({ data }: { data: DashboardAnalysis }) => {
     return scores.sort((a, b) => a.score - b.score)[0].name;
   };
 
-  const overallInsight = `Tingkat kesiapsiagaan desa ${scoreCategory.text.toLowerCase()} dengan skor rata-rata ${data.overallScore.toFixed(
+  const overallInsight = `Tingkat kesiapsiagaan Warga ${scoreCategory.text.toLowerCase()} dengan skor rata-rata ${data.overallScore.toFixed(
     1
   )}/10`;
   const priorityInsight = `${
@@ -660,7 +660,7 @@ const EmergencyContactsTab = () => (
             href="tel:112"
             className="btn btn-outline btn-success border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition-colors duration-300 mt-auto w-full"
           >
-            Panggil 112
+            Panggil 08122010051
           </a>
         </div>
       </div>

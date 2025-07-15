@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Website Infografis Desa",
-  description: "Aplikasi web untuk menampilkan infografis desa",
+  title: "Website Infografis Warga",
+  description: "Aplikasi web untuk menampilkan infografis kesiap siagaan warga RT 01/RW 03",
 };
 
 export default function RootLayout({
