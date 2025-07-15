@@ -78,3 +78,12 @@ export interface FullDashboardData {
   detailedScores: DetailedRespondentScore[];
   charts: ChartData;
 }
+
+export interface ContentItem {
+  id: string;
+  title: string;
+  description: string;
+  thumbnail: string;
+  posterUrl: string;
+  category: string;
+}

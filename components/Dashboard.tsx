@@ -114,6 +114,14 @@ const PIE_COLORS = {
   "Tidak punya sama sekali": "#ef4444",
 };
 const BAR_COLOR = "#0D9488";
+import {
+  PhoneCall,
+  Ambulance,
+  FireExtinguisher,
+  Building2,
+  ShieldAlert,
+} from "lucide-react"; // Menggunakan Building2 untuk variasi ikon BPBD
+import ContentCatalog from "./ContentCatalog";
 
 // --- Tab Content Components ---
 
@@ -563,14 +571,6 @@ const RawDataTab = ({ data }: { data: SurveyResponse[] }) => {
   );
 };
 
-import {
-  PhoneCall,
-  Ambulance,
-  FireExtinguisher,
-  Building2,
-  ShieldAlert,
-} from "lucide-react"; // Menggunakan Building2 untuk variasi ikon BPBD
-
 const EmergencyContactsTab = () => (
   <div className="bg-base-100 p-8 rounded-2xl shadow-md border border-gray-100 animate-fade-in">
     <h3 className="font-extrabold text-3xl text-content-strong mb-4 text-center leading-tight">
@@ -596,7 +596,7 @@ const EmergencyContactsTab = () => (
           </p>
           <a
             href="tel:110"
-            className="btn btn-outline btn-info border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition-colors duration-300 mt-auto w-full"
+            className="btn btn-outline rounded-xl p-1.5 btn-info border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition-colors duration-300 mt-auto w-full"
           >
             Panggil 110
           </a>
@@ -616,7 +616,7 @@ const EmergencyContactsTab = () => (
           </p>
           <a
             href="tel:118"
-            className="btn btn-outline btn-error border-red-500 text-red-500 hover:bg-red-500 hover:text-white transition-colors duration-300 mt-auto w-full"
+            className="btn btn-outline rounded-xl p-1.5 btn-error border-red-500 text-red-500 hover:bg-red-500 hover:text-white transition-colors duration-300 mt-auto w-full"
           >
             Panggil 118
           </a>
@@ -638,7 +638,7 @@ const EmergencyContactsTab = () => (
           </p>
           <a
             href="tel:113"
-            className="btn btn-outline btn-warning border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-colors duration-300 mt-auto w-full"
+            className="btn btn-outline rounded-xl p-1.5 btn-warning border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-colors duration-300 mt-auto w-full"
           >
             Panggil 113
           </a>
@@ -652,13 +652,15 @@ const EmergencyContactsTab = () => (
             size={48}
             className="text-green-600 mb-4 group-hover:scale-110 transition-transform"
           />
-          <h4 className="font-bold text-2xl text-green-800 mb-2">BPBD</h4>
+          <h4 className="font-bold text-2xl text-green-800 mb-2">
+            BPBD Kota Semarang
+          </h4>
           <p className="text-gray-700 text-sm mb-3">
             Badan Penanggulangan Bencana Daerah untuk mitigasi bencana.
           </p>
           <a
             href="tel:112"
-            className="btn btn-outline btn-success border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition-colors duration-300 mt-auto w-full"
+            className="btn btn-outline rounded-xl p-1.5 btn-success border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition-colors duration-300 mt-auto w-full"
           >
             Panggil 08122010051
           </a>
@@ -677,7 +679,7 @@ const EmergencyContactsTab = () => (
           </p>
           <a
             href="tel:115"
-            className="btn btn-outline btn-success border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-colors duration-300 mt-auto w-full"
+            className="btn btn-outline rounded-xl p-1.5 btn-success border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-colors duration-300 mt-auto w-full"
           >
             Panggil 115
           </a>
@@ -700,6 +702,7 @@ const TabNavigation = ({
     "Analisis Skor",
     "Data Mentah",
     "Kontak Darurat",
+    "Kumpulan Poster",
   ];
   return (
     <div className="mb-6 border-b border-slate-200">
@@ -783,6 +786,8 @@ export const Dashboard = () => {
         return <RawDataTab data={data.rawData} />;
       case "Kontak Darurat":
         return <EmergencyContactsTab />;
+      case "Kumpulan Poster":
+        return <ContentCatalog />;
       default:
         return <SummaryTab data={data.analysis} />;
     }
