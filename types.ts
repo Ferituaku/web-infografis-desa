@@ -79,11 +79,11 @@ export interface FullDashboardData {
   charts: ChartData;
 }
 
-export interface ContentItem {
-  id: string;
+export interface Poster {
+  id: number;
   title: string;
-  description: string;
-  thumbnail: string;
-  posterUrl: string;
-  category: string;
+  shortDescription: string;
+  longDescription: string;
+  imagePath: string;
+  thumbnailPath: string;
 }

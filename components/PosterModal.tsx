@@ -1,118 +1,123 @@
-"use client";
-
-import { useEffect } from "react";
-import type { ContentItem } from "../types";
+import React, { useEffect, useState } from "react";
+import { Poster } from "../types";
+import { X, ZoomIn } from "lucide-react";
 
 interface PosterModalProps {
-  item: ContentItem | null;
-  isOpen: boolean;
+  poster: Poster;
   onClose: () => void;
 }
 
-export default function PosterModal({
-  item,
-  isOpen,
-  onClose,
-}: PosterModalProps) {
+const PosterModal: React.FC<PosterModalProps> = ({ poster, onClose }) => {
+  const [isFullScreen, setIsFullScreen] = useState(false);
+
   useEffect(() => {
-    const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        onClose();
+    const handleEsc = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        if (isFullScreen) {
+          setIsFullScreen(false);
+        } else {
+          onClose();
+        }
       }
     };
+    window.addEventListener("keydown", handleEsc);
 
-    if (isOpen) {
-      document.addEventListener("keydown", handleEscape);
-      document.body.style.overflow = "hidden";
-    }
-
+    document.body.style.overflow = "hidden";
     return () => {
-      document.removeEventListener("keydown", handleEscape);
-      document.body.style.overflow = "unset";
+      window.removeEventListener("keydown", handleEsc);
+      document.body.style.overflow = "auto";
     };
-  }, [isOpen, onClose]);
+  }, [onClose, isFullScreen]);
 
-  if (!isOpen || !item) return null;
+  const toggleFullScreen = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setIsFullScreen((v) => !v);
+  };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-      {/* Blurred backdrop */}
+    <>
       <div
-        className="fixed inset-0 backdrop-blur-md bg-black/60"
+        className="fixed inset-0 bg-black/70 backdrop-blur-sm flex justify-center items-center z-50 p-4 animate-fadeIn"
         onClick={onClose}
-        aria-hidden="true"
-      />
-
-      {/* Modal content */}
-      <div className="relative bg-white dark:bg-cyan-700 rounded-2xl shadow-2xl max-w-4xl max-h-[90vh] w-full overflow-hidden">
-        {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-slate-200 dark:border-slate-700">
-          <div>
-            <h2 className="text-2xl font-bold text-slate-800 dark:text-slate-100">
-              {item.title}
-            </h2>
-            <p className="text-slate-600 dark:text-slate-300 mt-1">
-              {item.description}
-            </p>
-          </div>
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="poster-title"
+      >
+        <div
+          className="bg-base-100 rounded-lg bg-white shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col md:flex-row overflow-hidden relative animate-slideUp"
+          onClick={(e) => e.stopPropagation()}
+        >
           <button
             onClick={onClose}
-            className="p-2 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-full transition-colors"
-            aria-label="Close modal"
+            className="absolute top-3 right-3 text-content-light hover:text-content-strong transition-colors z-20 p-1 bg-base-200/80 rounded-full"
+            aria-label="Tutup"
           >
-            <svg
-              className="w-6 h-6 text-slate-500 dark:text-slate-400"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
+            <X className="w-6 h-6" />
           </button>
-        </div>
 
-        {/* PDF Viewer */}
-        <div className="p-6">
-          <div
-            className="bg-slate-100 dark:bg-slate-700 rounded-lg overflow-hidden"
-            style={{ height: "70vh" }}
-          >
-            <iframe
-              src={item.posterUrl}
-              className="w-full h-full border-0"
-              title={`${item.title} Poster`}
+          <div className="relative w-full md:w-1/2 h-64 md:h-auto bg-base-200 flex items-center justify-center group">
+            <img
+              src={poster.imagePath}
+              alt={`Poster: ${poster.title}`}
+              className="w-full h-full object-contain cursor-pointer"
+              onClick={toggleFullScreen}
             />
+            <div
+              onClick={toggleFullScreen}
+              className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+              aria-label="Perbesar gambar"
+              role="button"
+            >
+              <ZoomIn className="w-12 h-12 text-white" />
+            </div>
           </div>
-        </div>
 
-        {/* Footer */}
-        <div className="flex items-center justify-between p-6 border-t border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">
-          <div className="flex items-center space-x-2">
-            <span className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm px-3 py-1 rounded-full font-medium">
-              {item.category}
-            </span>
-          </div>
-          <div className="flex space-x-3">
-            <button
-              onClick={() => window.open(item.posterUrl, "_blank")}
-              className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors font-medium"
+          <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col justify-center overflow-y-auto">
+            <h2
+              id="poster-title"
+              className="text-2xl lg:text-3xl font-extrabold text-content-strong mb-4"
             >
-              Open in New Tab
-            </button>
-            <button
-              onClick={onClose}
-              className="px-4 py-2 bg-slate-200 dark:bg-slate-600 hover:bg-slate-300 dark:hover:bg-slate-500 text-slate-700 dark:text-slate-200 rounded-lg transition-colors font-medium"
-            >
-              Close
-            </button>
+              {poster.title}
+            </h2>
+            <p className="text-content leading-relaxed">
+              {poster.longDescription}
+            </p>
           </div>
         </div>
       </div>
-    </div>
+
+      {isFullScreen && (
+        <div
+          className="fixed inset-0 bg-black/90 z-[60] flex items-center justify-center p-4 animate-fadeIn"
+          onClick={() => setIsFullScreen(false)}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Tampilan penuh gambar poster"
+        >
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              setIsFullScreen(false);
+            }}
+            className="absolute top-4 right-4 text-white/80 hover:text-white transition-colors z-10"
+            aria-label="Tutup Tampilan Penuh"
+          >
+            <X className="w-8 h-8" />
+          </button>
+          <div
+            className="w-full h-full flex items-center justify-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={poster.imagePath}
+              alt={`Poster: ${poster.title} (tampilan penuh)`}
+              className="max-w-full max-h-full object-contain block"
+            />
+          </div>
+        </div>
+      )}
+    </>
   );
-}
+};
+
+export default PosterModal;
