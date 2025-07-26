@@ -19,7 +19,7 @@ const PosterCard: React.FC<PosterCardProps> = ({ poster, onSelect }) => {
           alt={poster.title}
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/20 bg-opacity-20 group-hover:bg-opacity-0 transition-all duration-300"></div>
+        <div className="absolute inset-0 bg-black/10 bg-opacity-20 group-hover:bg-opacity-0 transition-all duration-300"></div>
       </div>
       <div className="p-5">
         <h3 className="text-xl font-bold text-content-strong mb-2 truncate">

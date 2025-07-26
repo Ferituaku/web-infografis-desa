@@ -20,7 +20,7 @@ const ContentCatalog: React.FC = () => {
   return (
     <div className="bg-base-100 p-6 rounded-xl shadow-md">
       <h3 className="font-bold text-content-strong mb-6 text-xl">
-        Katalog Poster Infografis
+        Katalog Poster Informasi Mitigasi Bencana
       </h3>
       <ContentGrid posters={posterData} onPosterSelect={handlePosterSelect} />
 

@@ -84,6 +84,6 @@ export interface Poster {
   title: string;
   shortDescription: string;
   longDescription: string;
-  imagePath: string;
+  imagePath: string[];
   thumbnailPath: string;
 }
